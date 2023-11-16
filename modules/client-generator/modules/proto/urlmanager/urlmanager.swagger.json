@@ -1,0 +1,1015 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Url Manager Service",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Gemini Team",
+      "email": "info@gemini-commerce.com"
+    },
+    "license": {
+      "name": "Gemini fair use license",
+      "url": "https://gemini-commerce.com/api/fair-use-license"
+    }
+  },
+  "host": "urlmanager.api.gogemini.io",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/urlmanager.UrlManager/ChangeUrlRewriteRequestPath": {
+      "post": {
+        "summary": "Change Url Rewrite Request Path",
+        "operationId": "ChangeUrlRewriteRequestPath",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/urlmanagerChangeUrlRewriteRequestPathResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "500": {
+            "description": "An internal error occurred is thrown when an incompatible payload is sent",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/urlmanagerChangeUrlRewriteRequestPathRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Basic Operations"
+        ],
+        "security": [
+          {
+            "standardAuthorization": []
+          }
+        ]
+      }
+    },
+    "/urlmanager.UrlManager/CreateUrlRewrite": {
+      "post": {
+        "summary": "Create Url Rewrite",
+        "operationId": "CreateUrlRewrite",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/urlmanagerUrlRewrite"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "500": {
+            "description": "An internal error occurred is thrown when an incompatible payload is sent",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/urlmanagerCreateUrlRewriteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Basic Operations"
+        ],
+        "security": [
+          {
+            "standardAuthorization": []
+          }
+        ]
+      }
+    },
+    "/urlmanager.UrlManager/DeleteUrlRewrite": {
+      "post": {
+        "summary": "Delete Url Rewrite",
+        "operationId": "DeleteUrlRewrite",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/urlmanagerDeleteUrlRewriteResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "500": {
+            "description": "An internal error occurred is thrown when an incompatible payload is sent",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/urlmanagerDeleteUrlRewriteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Basic Operations"
+        ],
+        "security": [
+          {
+            "standardAuthorization": []
+          }
+        ]
+      }
+    },
+    "/urlmanager.UrlManager/GetUrlRewrite": {
+      "post": {
+        "summary": "Get Url Rewrite",
+        "operationId": "GetUrlRewrite",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/urlmanagerUrlRewrite"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "500": {
+            "description": "An internal error occurred is thrown when an incompatible payload is sent",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/urlmanagerGetUrlRewriteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Basic Operations"
+        ],
+        "security": [
+          {
+            "standardAuthorization": []
+          }
+        ]
+      }
+    },
+    "/urlmanager.UrlManager/ListUrlRewrites": {
+      "post": {
+        "summary": "List Url Rewrites",
+        "operationId": "ListUrlRewrites",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/urlmanagerListUrlRewritesResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "500": {
+            "description": "An internal error occurred is thrown when an incompatible payload is sent",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/urlmanagerListUrlRewritesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Basic Operations"
+        ],
+        "security": [
+          {
+            "standardAuthorization": []
+          }
+        ]
+      }
+    },
+    "/urlmanager.UrlManager/ListUrlRewritesByTargetPaths": {
+      "post": {
+        "summary": "List Url Rewrites By Target Paths",
+        "operationId": "ListUrlRewritesByTargetPaths",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/urlmanagerListUrlRewritesByTargetPathsRequest "
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "500": {
+            "description": "An internal error occurred is thrown when an incompatible payload is sent",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/urlmanagerListUrlRewritesByTargetPathsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Basic Operations"
+        ],
+        "security": [
+          {
+            "standardAuthorization": []
+          }
+        ]
+      }
+    },
+    "/urlmanager.UrlManager/ResolveUrlRewrite": {
+      "post": {
+        "summary": "Resolve Url Rewrite",
+        "operationId": "ResolveUrlRewrite",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/urlmanagerUrlRewrite"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "500": {
+            "description": "An internal error occurred is thrown when an incompatible payload is sent",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/urlmanagerResolveUrlRewriteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Basic Operations"
+        ],
+        "security": [
+          {
+            "standardAuthorization": []
+          }
+        ]
+      }
+    },
+    "/urlmanager/change_url_rewrite_request_path": {
+      "post": {
+        "summary": "Change Url Rewrite Request Path",
+        "operationId": "ChangeUrlRewriteRequestPath",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/urlmanagerChangeUrlRewriteRequestPathResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "500": {
+            "description": "An internal error occurred is thrown when an incompatible payload is sent",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/urlmanagerChangeUrlRewriteRequestPathRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Basic Operations"
+        ],
+        "security": [
+          {
+            "standardAuthorization": []
+          }
+        ]
+      }
+    },
+    "/urlmanager/create_url_rewrite": {
+      "post": {
+        "summary": "Create Url Rewrite",
+        "operationId": "CreateUrlRewrite",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/urlmanagerUrlRewrite"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "500": {
+            "description": "An internal error occurred is thrown when an incompatible payload is sent",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/urlmanagerCreateUrlRewriteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Basic Operations"
+        ],
+        "security": [
+          {
+            "standardAuthorization": []
+          }
+        ]
+      }
+    },
+    "/urlmanager/delete_url_rewrite": {
+      "post": {
+        "summary": "Delete Url Rewrite",
+        "operationId": "DeleteUrlRewrite",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/urlmanagerDeleteUrlRewriteResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "500": {
+            "description": "An internal error occurred is thrown when an incompatible payload is sent",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/urlmanagerDeleteUrlRewriteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Basic Operations"
+        ],
+        "security": [
+          {
+            "standardAuthorization": []
+          }
+        ]
+      }
+    },
+    "/urlmanager/get_url_rewrite": {
+      "post": {
+        "summary": "Get Url Rewrite",
+        "operationId": "GetUrlRewrite",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/urlmanagerUrlRewrite"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "500": {
+            "description": "An internal error occurred is thrown when an incompatible payload is sent",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/urlmanagerGetUrlRewriteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Basic Operations"
+        ],
+        "security": [
+          {
+            "standardAuthorization": []
+          }
+        ]
+      }
+    },
+    "/urlmanager/list_url_rewrites": {
+      "post": {
+        "summary": "List Url Rewrites",
+        "operationId": "ListUrlRewrites",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/urlmanagerListUrlRewritesResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "500": {
+            "description": "An internal error occurred is thrown when an incompatible payload is sent",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/urlmanagerListUrlRewritesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Basic Operations"
+        ],
+        "security": [
+          {
+            "standardAuthorization": []
+          }
+        ]
+      }
+    },
+    "/urlmanager/list_url_rewrites_by_target_paths": {
+      "post": {
+        "summary": "List Url Rewrites By Target Paths",
+        "operationId": "ListUrlRewritesByTargetPaths",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/urlmanagerListUrlRewritesByTargetPathsRequest "
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "500": {
+            "description": "An internal error occurred is thrown when an incompatible payload is sent",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/urlmanagerListUrlRewritesByTargetPathsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Basic Operations"
+        ],
+        "security": [
+          {
+            "standardAuthorization": []
+          }
+        ]
+      }
+    },
+    "/urlmanager/resolve_url_rewrite": {
+      "post": {
+        "summary": "Resolve Url Rewrite",
+        "operationId": "ResolveUrlRewrite",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/urlmanagerUrlRewrite"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "500": {
+            "description": "An internal error occurred is thrown when an incompatible payload is sent",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/urlmanagerResolveUrlRewriteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Basic Operations"
+        ],
+        "security": [
+          {
+            "standardAuthorization": []
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "GetUrlRewriteRequestCompoundIdentifier": {
+      "type": "object",
+      "properties": {
+        "context": {
+          "type": "string"
+        },
+        "requestPath": {
+          "type": "string"
+        }
+      }
+    },
+    "ListUrlRewritesRequestFilter": {
+      "type": "object",
+      "properties": {
+        "context": {
+          "type": "string"
+        },
+        "requestPath": {
+          "type": "string"
+        },
+        "targetPath": {
+          "type": "string"
+        },
+        "redirectType": {
+          "$ref": "#/definitions/UrlRewriteRedirectType"
+        }
+      }
+    },
+    "UrlRewriteLinkRel": {
+      "type": "string",
+      "enum": [
+        "LinkRel_UNKNOWN",
+        "LinkRel_NONE",
+        "LinkRel_CANONICAL",
+        "LinkRel_ALTERNATE"
+      ],
+      "default": "LinkRel_UNKNOWN"
+    },
+    "UrlRewriteRedirectType": {
+      "type": "string",
+      "enum": [
+        "RedirectType_UNKNOWN",
+        "RedirectType_OK",
+        "RedirectType_PERMANENT",
+        "RedirectType_TEMPORARY"
+      ],
+      "default": "RedirectType_UNKNOWN"
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "typeUrl": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string",
+          "format": "byte"
+        }
+      }
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "urlmanagerChangeUrlRewriteRequestPathRequest": {
+      "type": "object",
+      "properties": {
+        "tenantId": {
+          "type": "string",
+          "description": "Required."
+        },
+        "context": {
+          "type": "string",
+          "description": "Required."
+        },
+        "requestPath": {
+          "type": "string",
+          "description": "Required."
+        },
+        "requestPathNew": {
+          "type": "string",
+          "description": "Required."
+        }
+      }
+    },
+    "urlmanagerChangeUrlRewriteRequestPathResponse": {
+      "type": "object"
+    },
+    "urlmanagerCreateUrlRewriteRequest": {
+      "type": "object",
+      "properties": {
+        "tenantId": {
+          "type": "string",
+          "description": "Required."
+        },
+        "context": {
+          "type": "string",
+          "description": "Required."
+        },
+        "requestPath": {
+          "type": "string",
+          "description": "Required."
+        },
+        "targetPath": {
+          "type": "string",
+          "description": "Required."
+        },
+        "redirectType": {
+          "$ref": "#/definitions/UrlRewriteRedirectType",
+          "description": "Required."
+        },
+        "linkRel": {
+          "$ref": "#/definitions/UrlRewriteLinkRel",
+          "description": "Required."
+        }
+      }
+    },
+    "urlmanagerDeleteUrlRewriteRequest": {
+      "type": "object",
+      "properties": {
+        "tenantId": {
+          "type": "string",
+          "description": "Required."
+        },
+        "id": {
+          "type": "string",
+          "description": "Required."
+        }
+      }
+    },
+    "urlmanagerDeleteUrlRewriteResponse": {
+      "type": "object"
+    },
+    "urlmanagerGetUrlRewriteRequest": {
+      "type": "object",
+      "properties": {
+        "tenantId": {
+          "type": "string",
+          "description": "Required."
+        },
+        "id": {
+          "type": "string"
+        },
+        "compoundIdentifier": {
+          "$ref": "#/definitions/GetUrlRewriteRequestCompoundIdentifier"
+        }
+      }
+    },
+    "urlmanagerListUrlRewritesByTargetPathsRequest": {
+      "type": "object",
+      "properties": {
+        "tenantId": {
+          "type": "string",
+          "description": "Required."
+        },
+        "targetPaths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Required."
+        },
+        "context": {
+          "type": "string",
+          "description": "Optional."
+        },
+        "linkRel": {
+          "$ref": "#/definitions/UrlRewriteLinkRel",
+          "description": "Optional."
+        }
+      }
+    },
+    "urlmanagerListUrlRewritesByTargetPathsResponse": {
+      "type": "object",
+      "properties": {
+        "urlRewrites": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/urlmanagerUrlRewrite"
+          }
+        }
+      }
+    },
+    "urlmanagerListUrlRewritesRequest": {
+      "type": "object",
+      "properties": {
+        "tenantId": {
+          "type": "string",
+          "description": "Required."
+        },
+        "filter": {
+          "$ref": "#/definitions/ListUrlRewritesRequestFilter",
+          "description": "Optional."
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "The maximum number of url rewrites to return. The service may return fewer than\nthis value.\nIf unspecified, at most 10 url rewrites will be returned.\nThe maximum value is 200; values above 200 will be coerced to 200."
+        },
+        "pageToken": {
+          "type": "string",
+          "description": "A page token, received from a previous `ListUrlRewrites` call.\nProvide this to retrieve the subsequent page.\n\n\nWhen paginating, all other parameters provided to `ListUrlRewrites` must match\nthe call that provided the page token."
+        }
+      }
+    },
+    "urlmanagerListUrlRewritesResponse": {
+      "type": "object",
+      "properties": {
+        "urlRewrites": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/urlmanagerUrlRewrite"
+          }
+        },
+        "nextPageToken": {
+          "type": "string",
+          "description": "A token that can be sent as `page_token` to retrieve the next page.\nIf this field is omitted, there are no subsequent pages."
+        }
+      }
+    },
+    "urlmanagerResolveUrlRewriteRequest": {
+      "type": "object",
+      "properties": {
+        "tenantId": {
+          "type": "string",
+          "description": "Required."
+        },
+        "context": {
+          "type": "string",
+          "description": "Required."
+        },
+        "requestPath": {
+          "type": "string",
+          "description": "Required."
+        }
+      }
+    },
+    "urlmanagerUrlRewrite": {
+      "type": "object",
+      "properties": {
+        "tenantId": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "context": {
+          "type": "string",
+          "description": "Context field is part of the key.\nit's up to whoever is using the url manager to define it.\ne.g. locale or market or a concatenation of the two if needed."
+        },
+        "requestPath": {
+          "type": "string"
+        },
+        "targetPath": {
+          "type": "string"
+        },
+        "redirectType": {
+          "$ref": "#/definitions/UrlRewriteRedirectType"
+        },
+        "linkRel": {
+          "$ref": "#/definitions/UrlRewriteLinkRel"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "standardAuthorization": {
+      "type": "oauth2",
+      "name": "Authorization",
+      "in": "header"
+    }
+  }
+}
