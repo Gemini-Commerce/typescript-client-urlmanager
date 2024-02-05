@@ -1,4 +1,4 @@
-version=1.0.1
+version=1.0.2
 
 generate:
 	$(MAKE) -C ./modules/client-generator/ generate-client service=urlmanager version=${version}
