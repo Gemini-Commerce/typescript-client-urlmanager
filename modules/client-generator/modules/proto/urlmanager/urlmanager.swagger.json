@@ -13,6 +13,15 @@
       "url": "https://gemini-commerce.com/api/fair-use-license"
     }
   },
+  "tags": [
+    {
+      "name": "UrlManager",
+      "description": "Url Manager Description",
+      "externalDocs": {
+        "url": "https://gemini-commerce.com/api/urlmanager"
+      }
+    }
+  ],
   "host": "urlmanager.api.gogemini.io",
   "basePath": "/",
   "schemes": [
@@ -792,14 +801,11 @@
     "protobufAny": {
       "type": "object",
       "properties": {
-        "typeUrl": {
+        "@type": {
           "type": "string"
-        },
-        "value": {
-          "type": "string",
-          "format": "byte"
         }
-      }
+      },
+      "additionalProperties": {}
     },
     "rpcStatus": {
       "type": "object",
@@ -814,6 +820,7 @@
         "details": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/protobufAny"
           }
         }
@@ -933,6 +940,7 @@
         "urlRewrites": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/urlmanagerUrlRewrite"
           }
         }
@@ -966,6 +974,7 @@
         "urlRewrites": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/urlmanagerUrlRewrite"
           }
         },

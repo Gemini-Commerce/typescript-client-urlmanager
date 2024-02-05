@@ -81,18 +81,14 @@ export interface ListUrlRewritesRequestFilter {
  * @interface ProtobufAny
  */
 export interface ProtobufAny {
+    [key: string]: any;
+
     /**
      * 
      * @type {string}
      * @memberof ProtobufAny
      */
-    'typeUrl'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ProtobufAny
-     */
-    'value'?: string;
+    '@type'?: string;
 }
 /**
  * 
