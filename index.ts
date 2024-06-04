@@ -12,34 +12,7 @@
  * Do not edit the class manually.
  */
 
-/**
- * 
- * @export
- * @interface UrlmanagerListUrlRewritesByTargetPathsRequest
- */
-export interface UrlmanagerListUrlRewritesByTargetPathsRequest {
-    /**
-     * Required.
-     * @type {string}
-     * @memberof UrlmanagerListUrlRewritesByTargetPathsRequest
-     */
-    'tenantId'?: string;
-    /**
-     * Required.
-     * @type {Array<string>}
-     * @memberof UrlmanagerListUrlRewritesByTargetPathsRequest
-     */
-    'targetPaths'?: Array<string>;
-    /**
-     * Optional.
-     * @type {string}
-     * @memberof UrlmanagerListUrlRewritesByTargetPathsRequest
-     */
-    'context'?: string;
-    /**
-     * 
-     * @type {UrlRewriteLinkRel}
-     * @memberof UrlmanagerListUrlRewritesByTargetPathsRequest
-     */
-    'linkRel'?: UrlRewriteLinkRel;
-}
+
+export * from "./api";
+export * from "./configuration";
+
